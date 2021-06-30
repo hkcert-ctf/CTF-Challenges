@@ -1,10 +1,8 @@
-### Challenge Name: web and network
-* Author: PISA- Peter Cheung
-* Category: Forensic
-* Description:  Doctor Stark forget his login password. He asked the IT admin and he was given a file.
-斯塔克醫生忘記了他的登入密碼。 他問了 IT 管理員，並給了他一個文件。
+### Challenge - web and network 網頁及網絡
 
-[Pcap File](https://github.com/hkcert/ctf2020/blob/master/pcap.pcap)
+* **Author 作者:** PISA
+* **Category 類型:** Miscellaneous 其他
+* **Description 描述:**
 
-* Hint: wireshark
-* Score: 500
+<p>Doctor Stark forget his login password. He asked the IT admin and he was given a file. </p>
+<p>斯塔克醫生忘記了他的登入密碼。 他問了 IT 管理員，並給了他一個文件。</p>
