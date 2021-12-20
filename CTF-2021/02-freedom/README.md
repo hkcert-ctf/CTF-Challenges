@@ -25,7 +25,7 @@ nc chalp.hkcert21.pwnable.hk 28102
 
 ### Attachments
 
-- [freedom_ff0173b179d746386dca0e93e6c00d47.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/freedom_ff0173b179d746386dca0e93e6c00d47.zip)
+- [freedom_ff0173b179d746386dca0e93e6c00d47.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/02-freedom/freedom_ff0173b179d746386dca0e93e6c00d47.zip)
 
 ## Flag
 
