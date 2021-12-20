@@ -19,7 +19,7 @@ nc chalp.hkcert21.pwnable.hk 28120
 
 ### Attachments
 
-- [seccomp2_2bde099c31077e05e5bcdaee0bbbffca.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/seccomp2_2bde099c31077e05e5bcdaee0bbbffca.zip)
+- [seccomp2_2bde099c31077e05e5bcdaee0bbbffca.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/20-seccomp2/seccomp2_2bde099c31077e05e5bcdaee0bbbffca.zip)
 
 ## Flag
 
