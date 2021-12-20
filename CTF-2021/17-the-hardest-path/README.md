@@ -27,7 +27,7 @@ nc chalp.hkcert21.pwnable.hk 28117
 
 ### Attachments
 
-- [the-hardest-path_e00c6aa7b64b8dc2a06e577937b5b07c.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/the-hardest-path_e00c6aa7b64b8dc2a06e577937b5b07c.zip)
+- [the-hardest-path_e00c6aa7b64b8dc2a06e577937b5b07c.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/17-the-hardest-path/the-hardest-path_e00c6aa7b64b8dc2a06e577937b5b07c.zip)
 
 ## Flag
 
