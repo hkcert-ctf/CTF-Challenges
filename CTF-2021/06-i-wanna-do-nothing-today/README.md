@@ -20,7 +20,7 @@ I knew you just want to spend your time chilling instead of spending time CTFs. 
 
 ### Attachments
 
-- [i-wanna-do-nothing-today_184432525201f6e0854dea960ea27381.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/i-wanna-do-nothing-today_184432525201f6e0854dea960ea27381.zip)
+- [i-wanna-do-nothing-today_184432525201f6e0854dea960ea27381.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/06-i-wanna-do-nothing-today/i-wanna-do-nothing-today_184432525201f6e0854dea960ea27381.zip)
 
 ## Flag
 
