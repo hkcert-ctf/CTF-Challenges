@@ -20,7 +20,7 @@ nc chalp.hkcert21.pwnable.hk 28004
 
 ### Attachments
 
-- [pyjail1_f7be93352498ebd158a0a9fc069b30e9.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/pyjail1_f7be93352498ebd158a0a9fc069b30e9.zip)
+- [pyjail1_f7be93352498ebd158a0a9fc069b30e9.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/04-pyjail1/pyjail1_f7be93352498ebd158a0a9fc069b30e9.zip)
 
 ## Flag
 
