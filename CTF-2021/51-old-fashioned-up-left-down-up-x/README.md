@@ -16,7 +16,7 @@ What is this cheat code up-left-down-`upx`?
 
 ### Attachments
 
-- [old-fashioned-up-left-down-up-x_361137df01363bfb8b90f911cdd09d54.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/old-fashioned-up-left-down-up-x_361137df01363bfb8b90f911cdd09d54.zip)
+- [old-fashioned-up-left-down-up-x_361137df01363bfb8b90f911cdd09d54.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/old-fashioned-up-left-down-up-x_361137df01363bfb8b90f911cdd09d54.zip)
 
 ## Flag
 
