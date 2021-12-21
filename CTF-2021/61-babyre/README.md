@@ -16,7 +16,7 @@ The slower you become, the more you are able to get.
 
 ### Attachments
 
-- [babyre_e05b09c438ed9a504d81c4d441d4cf73.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/babyre_e05b09c438ed9a504d81c4d441d4cf73.zip)
+- [babyre_e05b09c438ed9a504d81c4d441d4cf73.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/babyre_e05b09c438ed9a504d81c4d441d4cf73.zip)
 
 ## Flag
 
