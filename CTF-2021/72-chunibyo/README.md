@@ -27,7 +27,7 @@ hkcert21{***REDACTED***}
 
 ### Attachments
 
-- [chunibyo_e881d3e6bf8de1e51b517f0b62d72976.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/chunibyo_e881d3e6bf8de1e51b517f0b62d72976.zip)
+- [chunibyo_e881d3e6bf8de1e51b517f0b62d72976.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/chunibyo_e881d3e6bf8de1e51b517f0b62d72976.zip)
 
 ## Flag
 
