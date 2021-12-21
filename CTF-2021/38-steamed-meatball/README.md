@@ -22,7 +22,7 @@ nc chalp.hkcert21.pwnable.hk 28338
 
 ### Attachments
 
-- [steamed-meatball_b3d88e1623bd492534d65b4835bfd191.py.png](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/steamed-meatball_b3d88e1623bd492534d65b4835bfd191.py.png)
+- [steamed-meatball_b3d88e1623bd492534d65b4835bfd191.py.png](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/steamed-meatball_b3d88e1623bd492534d65b4835bfd191.py.png)
 
 ## Flag
 
