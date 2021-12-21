@@ -23,7 +23,7 @@ Hint:
 
 ### Attachments
 
-- [shuffle_03f016d972f11c15bb25d038a2bd6bb3.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/shuffle_03f016d972f11c15bb25d038a2bd6bb3.zip)
+- [shuffle_03f016d972f11c15bb25d038a2bd6bb3.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/shuffle_03f016d972f11c15bb25d038a2bd6bb3.zip)
 
 
 ## Hints
