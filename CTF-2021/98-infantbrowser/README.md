@@ -40,7 +40,7 @@ Type=Application
 
 ### Attachments
 
-- [infantbrowser_6939c231042fd155a512940cd0982f76.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/infantbrowser_6939c231042fd155a512940cd0982f76.zip)
+- [infantbrowser_6939c231042fd155a512940cd0982f76.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/infantbrowser_6939c231042fd155a512940cd0982f76.zip)
 
 ## Flag
 
