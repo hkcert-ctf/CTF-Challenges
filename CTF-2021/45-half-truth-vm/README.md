@@ -22,7 +22,7 @@ They use this program to communicate and send flags over the air :thinking: Can 
 
 ### Attachments
 
-- [half-truth-vm_157d7c1d1167b4b8efc0842d0416daf4.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/half-truth-vm_157d7c1d1167b4b8efc0842d0416daf4.zip)
+- [half-truth-vm_157d7c1d1167b4b8efc0842d0416daf4.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/half-truth-vm_157d7c1d1167b4b8efc0842d0416daf4.zip)
 
 ## Update
 
