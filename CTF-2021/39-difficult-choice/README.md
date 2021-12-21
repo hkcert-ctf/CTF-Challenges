@@ -23,7 +23,7 @@ The flag is located at `/home/user/Desktop/flag.jpg`.
 
 ### Attachments
 
-- [difficult-choice_2fdc0e16be766592692bd9c5b07c6aaa.mem.xz](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/difficult-choice_2fdc0e16be766592692bd9c5b07c6aaa.mem.xz)
+- [difficult-choice_2fdc0e16be766592692bd9c5b07c6aaa.mem.xz](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/difficult-choice_2fdc0e16be766592692bd9c5b07c6aaa.mem.xz)
 
 ## Hints
 
