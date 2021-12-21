@@ -27,7 +27,7 @@ nc chalp.hkcert21.pwnable.hk 28167
 
 ### Attachments
 
-- [the-promised-neverland_b500babf2da78c9c68ee06d79aace461.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/the-promised-neverland_b500babf2da78c9c68ee06d79aace461.zip)
+- [the-promised-neverland_b500babf2da78c9c68ee06d79aace461.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/the-promised-neverland_b500babf2da78c9c68ee06d79aace461.zip)
 
 ## Flag
 
