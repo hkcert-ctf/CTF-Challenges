@@ -18,7 +18,7 @@ Note: There is no dependency between part 1 and part 2 (i.e. it is not necessary
 
 ### Attachments
 
-- [jack-botnet-service-2_064a2bd6bb9036f6e8788d8418e18300.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/jack-botnet-service-2_064a2bd6bb9036f6e8788d8418e18300.zip)
+- [jack-botnet-service-2_064a2bd6bb9036f6e8788d8418e18300.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/jack-botnet-service-2_064a2bd6bb9036f6e8788d8418e18300.zip)
 
 ## Flag
 
