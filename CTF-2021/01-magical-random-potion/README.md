@@ -29,7 +29,7 @@ nc chalp.hkcert21.pwnable.hk 28201
 
 ### Attachments
 
-- [magical-random-potion_d027eaf3f3ee51e40b6253c92476569f.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/01-magical-random-potion/magical-random-potion_d027eaf3f3ee51e40b6253c92476569f.zip)
+- [magical-random-potion_d027eaf3f3ee51e40b6253c92476569f.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/magical-random-potion_d027eaf3f3ee51e40b6253c92476569f.zip)
 
 ## Flag
 
