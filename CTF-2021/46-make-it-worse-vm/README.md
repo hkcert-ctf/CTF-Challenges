@@ -20,7 +20,7 @@ nc chalp.hkcert21.pwnable.hk 28246
 
 ### Attachments
 
-- [make-it-worse-vm_10ae27200a5d28545839d71d4e6ff58e.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/make-it-worse-vm_10ae27200a5d28545839d71d4e6ff58e.zip)
+- [make-it-worse-vm_10ae27200a5d28545839d71d4e6ff58e.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/make-it-worse-vm_10ae27200a5d28545839d71d4e6ff58e.zip)
 
 ## Update
 
