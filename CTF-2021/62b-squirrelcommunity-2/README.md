@@ -22,9 +22,9 @@ http://chalf.hkcert21.pwnable.hk:28062/
 
 **UPDATE (13 Nov 18:04):**
 
-SqlChat platform is now open source: [squirrelcommunity_c3807d99880fc4b7a3381b4a4fd8870c.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/squirrelcommunity_c3807d99880fc4b7a3381b4a4fd8870c.zip)
+SqlChat platform is now open source: [squirrelcommunity_c3807d99880fc4b7a3381b4a4fd8870c.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/squirrelcommunity_c3807d99880fc4b7a3381b4a4fd8870c.zip)
 
-(Irrelevant parts are removed. But if you want, [here is the full source code](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/squirrelcommunity_full_e2aab6cb5bca84d455aa6937ff34e362.zip))
+(Irrelevant parts are removed. But if you want, [here is the full source code](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/squirrelcommunity_full_e2aab6cb5bca84d455aa6937ff34e362.zip))
 
 
 ## Flag
