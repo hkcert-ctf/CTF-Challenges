@@ -27,7 +27,7 @@ nc chalp.hkcert21.pwnable.hk 28157
 
 ### Attachments
 
-- [long-story-short_55e7b1b931d8aaa5670e38b1e14c82ea.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/long-story-short_55e7b1b931d8aaa5670e38b1e14c82ea.zip)
+- [long-story-short_55e7b1b931d8aaa5670e38b1e14c82ea.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/long-story-short_55e7b1b931d8aaa5670e38b1e14c82ea.zip)
 
 ## Flag
 
