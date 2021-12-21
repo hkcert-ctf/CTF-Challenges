@@ -20,7 +20,7 @@ nc chalp.hkcert21.pwnable.hk 28135
 
 ### Attachments
 
-- [mastermind_5523f04f6fced23a0ec9c780c2c4bbab.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/mastermind_5523f04f6fced23a0ec9c780c2c4bbab.zip)
+- [mastermind_5523f04f6fced23a0ec9c780c2c4bbab.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/mastermind_5523f04f6fced23a0ec9c780c2c4bbab.zip)
 
 ## Flag
 
