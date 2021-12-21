@@ -18,7 +18,7 @@ Can you help us to find the flag? There is only weird strings inside....
 
 ### Attachments
 
-- [scattered_605e04699fe3f83e375fc02c4ba09fe2.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/scattered_605e04699fe3f83e375fc02c4ba09fe2.zip)
+- [scattered_605e04699fe3f83e375fc02c4ba09fe2.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/scattered_605e04699fe3f83e375fc02c4ba09fe2.zip)
 
 ## Flag
 
