@@ -20,7 +20,7 @@ nc chalp.hkcert21.pwnable.hk 38230
 
 ### Attachments
 
-- [fortunecookie1_8eb18ae526d9eafa1c6bf4d7a5427b82.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/fortunecookie1_8eb18ae526d9eafa1c6bf4d7a5427b82.zip)
+- [fortunecookie1_8eb18ae526d9eafa1c6bf4d7a5427b82.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/fortunecookie1_8eb18ae526d9eafa1c6bf4d7a5427b82.zip)
 
 ## Flag
 
