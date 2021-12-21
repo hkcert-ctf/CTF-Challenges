@@ -27,7 +27,7 @@ To solve this challenge, you need to read the source code `chall.py`. Try to get
 
 ### Attachments
 
-- [the-little-comedian_58178adf8b732db76116f5bb7e0c4198.zip](https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2021/22-the-little-comedian/the-little-comedian_58178adf8b732db76116f5bb7e0c4198.zip)
+- [the-little-comedian_58178adf8b732db76116f5bb7e0c4198.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/22-the-little-comedian/the-little-comedian_58178adf8b732db76116f5bb7e0c4198.zip)
 
 ## Hints
 
