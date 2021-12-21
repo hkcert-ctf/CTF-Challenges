@@ -27,7 +27,7 @@ He decided to change the numbers and release it to the public again. Now crack i
 
 ### Attachments
 
-- [braceless_e0a09d2cb4ff894e1dcf7b2bd70a2379.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/braceless_e0a09d2cb4ff894e1dcf7b2bd70a2379.zip)
+- [braceless_e0a09d2cb4ff894e1dcf7b2bd70a2379.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/braceless_e0a09d2cb4ff894e1dcf7b2bd70a2379.zip)
 
 ## Flag
 
