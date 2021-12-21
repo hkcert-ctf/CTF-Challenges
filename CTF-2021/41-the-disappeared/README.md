@@ -22,7 +22,7 @@ Find the login password for user `hkcertctf`.
 
 ### Attachments
 
-- [the-disappeared_d56bc14301029c65cee70f4c1528f2a9.dmp.xz](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/the-disappeared_d56bc14301029c65cee70f4c1528f2a9.dmp.xz)
+- [the-disappeared_d56bc14301029c65cee70f4c1528f2a9.dmp.xz](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/the-disappeared_d56bc14301029c65cee70f4c1528f2a9.dmp.xz)
 
 ## Flag
 
