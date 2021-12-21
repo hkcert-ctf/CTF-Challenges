@@ -28,7 +28,7 @@ nc chalp.hkcert21.pwnable.hk 28015
 
 ### Attachments
 
-- [help-you-2_15cb628fdeb0ce69191b47d76a644432.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/15-help-you-2/help-you-2_15cb628fdeb0ce69191b47d76a644432.zip)
+- [help-you-2_15cb628fdeb0ce69191b47d76a644432.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/help-you-2_15cb628fdeb0ce69191b47d76a644432.zip)
 
 ## Flag
 
