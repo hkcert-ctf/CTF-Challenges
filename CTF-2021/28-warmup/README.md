@@ -34,7 +34,7 @@ nc chalp.hkcert21.pwnable.hk 28028
 
 ### Attachments
 
-- [warmup_6eab9fa64b5dd76649f6c0372315aabe.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/warmup_6eab9fa64b5dd76649f6c0372315aabe.zip)
+- [warmup_6eab9fa64b5dd76649f6c0372315aabe.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/warmup_6eab9fa64b5dd76649f6c0372315aabe.zip)
 
 ## Hints
 
