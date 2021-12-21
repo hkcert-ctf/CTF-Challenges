@@ -22,7 +22,7 @@ P.S. You need `libsodium23`, `libgmpxx4ldbl` to run the binary
 
 ### Attachments
 
-- [another-vm-in-københavn_073a3f140fd0759e81dddfb9001f3473.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/another-vm-in-københavn_073a3f140fd0759e81dddfb9001f3473.zip)
+- [another-vm-in-københavn_073a3f140fd0759e81dddfb9001f3473.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/another-vm-in-kobenhavn_073a3f140fd0759e81dddfb9001f3473.zip)
 
 ## Update
 
