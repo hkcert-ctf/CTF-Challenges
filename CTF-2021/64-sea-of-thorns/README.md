@@ -23,7 +23,7 @@ http://chalp.hkcert21.pwnable.hk:28364/
 
 ### Attachments
 
-- [sea-of-thorns_e045a87b1909724e7292510354cc1f3b.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/sea-of-thorns_e045a87b1909724e7292510354cc1f3b.zip)
+- [sea-of-thorns_e045a87b1909724e7292510354cc1f3b.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/sea-of-thorns_e045a87b1909724e7292510354cc1f3b.zip)
 
 ## Flag
 
