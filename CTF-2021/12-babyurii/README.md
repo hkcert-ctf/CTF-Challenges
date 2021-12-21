@@ -20,7 +20,7 @@ Flag is located in `/proof_*.sh`
 
 ### Attachments
 
-- [babyurii_858b50b5ac122ad47ca6c16c07c3a50e.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/12-babyurii/babyurii_858b50b5ac122ad47ca6c16c07c3a50e.zip)
+- [babyurii_858b50b5ac122ad47ca6c16c07c3a50e.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/babyurii_858b50b5ac122ad47ca6c16c07c3a50e.zip)
 
 ## Hints
 
