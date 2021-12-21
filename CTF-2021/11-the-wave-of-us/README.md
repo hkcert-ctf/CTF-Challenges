@@ -48,7 +48,7 @@ There is some contester mentioned that the tool on Github cannot be executed nor
 
 ### Attachments
 
-- [the-wave-of-us_ed82d2616c9d118d8dc8637022902330.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/the-wave-of-us/the-wave-of-us_ed82d2616c9d118d8dc8637022902330.zip)
+- [the-wave-of-us_ed82d2616c9d118d8dc8637022902330.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/the-wave-of-us_ed82d2616c9d118d8dc8637022902330.zip)
 
 ## Flag
 
