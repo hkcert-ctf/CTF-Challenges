@@ -19,7 +19,7 @@ Think out of the box [here](https://www.youtube.com/watch?v=YhZdyYq9zRk&t=110s)
 
 ### Attachments
 
-- [easyheap_bcb0822e7b6e4e92fab858506572a972.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/easyheap_bcb0822e7b6e4e92fab858506572a972.zip)
+- [easyheap_bcb0822e7b6e4e92fab858506572a972.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/easyheap_bcb0822e7b6e4e92fab858506572a972.zip)
 
 ## Flag
 
