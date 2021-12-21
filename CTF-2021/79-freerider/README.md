@@ -25,7 +25,7 @@ Ciphertext: `6ccb80c46c19243a37633d316a66871ca70ec8a44f48a80134f31d8d27f920c6bd5
 
 ### Attachments
 
-- [freerider_d0f9b434baf71128adbca0fce2634e9b.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/freerider_d0f9b434baf71128adbca0fce2634e9b.zip)
+- [freerider_d0f9b434baf71128adbca0fce2634e9b.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/freerider_d0f9b434baf71128adbca0fce2634e9b.zip)
 
 ## Flag
 
