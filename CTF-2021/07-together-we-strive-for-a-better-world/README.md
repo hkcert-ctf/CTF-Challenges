@@ -25,7 +25,7 @@ nc chalp.hkcert21.pwnable.hk 28207
 
 ### Attachments
 
-- [together-we-strive-for-a-better-world_7ace7a98cc24cb66f8891aa49dc8e346.zip](https://github.com/hkcert-ctf/CTF-Challenges/raw/main/CTF-2021/07-together-we-strive-for-a-better-world/together-we-strive-for-a-better-world_7ace7a98cc24cb66f8891aa49dc8e346.zip)
+- [together-we-strive-for-a-better-world_7ace7a98cc24cb66f8891aa49dc8e346.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/together-we-strive-for-a-better-world_7ace7a98cc24cb66f8891aa49dc8e346.zip)
 
 ## Flag
 
