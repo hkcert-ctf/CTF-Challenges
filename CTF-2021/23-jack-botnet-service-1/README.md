@@ -16,7 +16,7 @@ Jack is testing his botnet, what could go wrong?
 
 ### Attachments
 
-- [jack-botnet-service-1_064a2bd6bb9036f6e8788d8418e18300.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/jack-botnet-service-1/jack-botnet-service-1_064a2bd6bb9036f6e8788d8418e18300.zip)
+- [jack-botnet-service-1_064a2bd6bb9036f6e8788d8418e18300.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/jack-botnet-service-1_064a2bd6bb9036f6e8788d8418e18300.zip)
 
 ## Flag
 
