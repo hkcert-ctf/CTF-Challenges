@@ -16,7 +16,7 @@ Retrieve the flag step by step.
 
 ### Attachments
 
-- [excel_4891c2b27e2312569280036715a101b9.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/excel_4891c2b27e2312569280036715a101b9.zip)
+- [excel_4891c2b27e2312569280036715a101b9.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/excel_4891c2b27e2312569280036715a101b9.zip)
 
 ## Flag
 
