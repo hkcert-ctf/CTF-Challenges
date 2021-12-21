@@ -17,7 +17,7 @@ Submit the deactivation key as the flag.
 
 ### Attachments
 
-- [timebomb_20799fed87d97c7a9b7fcd00af5a21e8.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/timebomb_20799fed87d97c7a9b7fcd00af5a21e8.zip)
+- [timebomb_20799fed87d97c7a9b7fcd00af5a21e8.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/timebomb_20799fed87d97c7a9b7fcd00af5a21e8.zip)
 
 ## Flag
 
