@@ -22,7 +22,7 @@ nc chalp.hkcert21.pwnable.hk 28329
 
 ### Attachments
 
-- [cooldown_bed1731576f7246cad74bd27c018dc07.zip](https://github.com/blackb6a/hkcert-ctf-2021-challenges/releases/download/v1.0.0/cooldown_bed1731576f7246cad74bd27c018dc07.zip)
+- [cooldown_bed1731576f7246cad74bd27c018dc07.zip](https://github.com/hkcert-ctf/CTF-Challenges/releases/download/CTF2021/cooldown_bed1731576f7246cad74bd27c018dc07.zip)
 
 ## Flag
 
