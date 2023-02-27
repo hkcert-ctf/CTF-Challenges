@@ -55,7 +55,7 @@
 
 This repo contains all challenges from HKCERT CTF 2022, including those are not by Black Bauhinia.
 
-Thank you to HKCERT and all authors for publicizing challenges in this repository!
+Thank you to all authors for publicizing challenges in this repository!
 
 And most importantly, a big thank you to all the participants!
 

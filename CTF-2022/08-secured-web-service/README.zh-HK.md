@@ -1,9 +1,9 @@
-Secured Web Service
+正街
 ===
 
 ## Description
 
-Find the flag in `/var/www/html/flag.txt`
+在 `/var/www/html/flag.txt` 中找到旗幟
 
 Web: {CHAL_URL_LINK}/flag/
 
