@@ -1,0 +1,62 @@
+{% extends "base/layout.html" %}
+
+{% block title %}Scoreboard{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-lg-6 p-2">
+      <div class="card">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col" class="text-center">Username</th>
+                <th scope="col" class="text-center">Score</th>
+              </tr>
+            </thead>
+            <tbody id="user-list">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/dayjs.min.js"
+  integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/plugin/relativeTime.min.js"
+  integrity="sha512-MVzDPmm7QZ8PhEiqJXKz/zw2HJuv61waxb8XXuZMMs9b+an3LoqOqhOEt5Nq3LY1e4Ipbbd/e+AWgERdHlVgaA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  async function listTopUsers() {
+    const listTopUsersResponse = await fetch('/api/users/top')
+    const { users } = await listTopUsersResponse.json()
+
+    users.forEach((user, index) => {
+      const userTemplateDom = document.createElement('template')
+      userTemplateDom.innerHTML = `
+            <tr>
+              <td></td>
+              <td></td>
+              <td style="text-align: right;"></td>
+            </tr>`
+      const userDom = userTemplateDom.content.children[0]
+      userDom.getElementsByTagName('td')[0].innerText = index + 1
+      userDom.getElementsByTagName('td')[1].innerText = user['username']
+      userDom.getElementsByTagName('td')[2].innerText = user['score']
+
+      document.getElementById('user-list').appendChild(userDom)
+    })
+  }
+
+  dayjs.extend(dayjs_plugin_relativeTime)
+  listTopUsers()
+</script>
+{% endblock %}

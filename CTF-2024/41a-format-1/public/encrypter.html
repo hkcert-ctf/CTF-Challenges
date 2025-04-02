@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content=""/>
+		<title>Flag Encrypter</title>
+		<style>
+			#result {
+				word-break: break-all;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Flag Encrypter</h1>
+		Enter the Flag: <input type="text" id="flag"><br>
+		Result: <progress id="progress" style="display: none;"></progress><br>
+		<div id="result"></div>
+		<button id="encrypt">Encrypt</button>
+		<script>
+			var result = document.getElementById("result");
+			var flag = document.getElementById("flag");
+			var encrypt = document.getElementById("encrypt");
+			var progress = document.getElementById("progress");
+			encrypt.addEventListener("click", function() {
+				var ascii_values = flag.value.split("").map(function (c) { return c.charCodeAt(0) });
+				if (ascii_values.some(function (c) { return c >= 255 })) {
+					result.textContent = "Only ASCII characters are allowed!";
+					return;
+				};
+				if (ascii_values.length % 3 == 1) {
+					ascii_values.push(0xd); // just a \r
+				}
+				if (ascii_values.length % 3 == 2) {
+					ascii_values.push(0xa); // just a \n
+				}
+				ascii_values.push(0xff);
+				ascii_values.push(0xff);
+				ascii_values.push(0xff);
+				while (ascii_values.length < 960 || ascii_values.length % 3 != 0) {
+					ascii_values.push(Math.floor(1 + Math.random() * 254));
+				}
+				var encrypted = [];
+				encrypt_flag(ascii_values, encrypted);
+			});
+
+			function encrypt_flag(ascii_values, target) {
+				progress.style.display = "";
+				progress.max = ascii_values.length;
+				function handle_index(index) {
+					progress.value = index;
+					var cv = document.createElement("canvas");
+					cv.width = (ascii_values[index] * 16) + Math.floor(ascii_values[index + 1] / 16);
+					cv.height = ((ascii_values[index + 1] % 16) * 256) + ascii_values[index + 2];
+					var temp = cv.toBlob(function(blob) {
+						var reader = new FileReader();
+						reader.onloadend = function() {
+							target.push(new Uint32Array(reader.result.slice(29, 33))[0]);
+							if (index + 3 < ascii_values.length) {
+								handle_index(index + 3);
+							} else {
+								var processed = [];
+								process(target, processed);
+								result.textContent = processed.join("");
+								progress.style.display = "none";
+							}
+						}
+						reader.readAsArrayBuffer(blob);
+					});
+				}
+				handle_index(0);
+			}
+
+			function process(target, processed) {
+				var sum = Math.floor(Math.random() * 0xffffffff);
+				processed.push(sum.toString(16).padStart(8, "0"));
+				// preserve the links to the previous elements
+				for (var i = 0; i < target.length; i++) {
+					sum = (((sum + target[i]) & 0xffffffff) >>> 0);
+					processed.push(sum.toString(16).padStart(8, "0"));
+				}
+				return
+					processed.sort(
+						function(a, b) {
+							return Math.random() - 0.5;
+						}
+					);
+			}
+		</script>
+	</body>
+</html>

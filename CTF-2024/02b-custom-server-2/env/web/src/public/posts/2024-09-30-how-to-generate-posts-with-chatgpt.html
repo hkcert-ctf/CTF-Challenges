@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Bootstrap 5 Page with Sticky Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">High Knowledge Preparatory School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Post Header -->
+  <section class="post-header text-center">
+    <div class="container pt-4 pb-2">
+      <h1 class="post-title">How to generate posts with ChatGPT</h1>
+      <p class="post-meta">
+        <span class="post-author">John Doe</span>
+        <span class="text-muted">・</span>
+        <span>September 30, 2024</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Post Content -->
+  <section class="post-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <img src="/images/chatgpt.png" class="img-fluid pb-4">
+
+          <p>
+            Generating blog posts can be a daunting task for many writers, but with the advent of artificial intelligence tools like ChatGPT, the process has become significantly easier. In this post, we’ll explore how you can leverage ChatGPT to generate high-quality blog content efficiently.
+          </p>
+
+          <h3>What is ChatGPT?</h3>
+          <p>
+            ChatGPT is a language model developed by OpenAI that can generate human-like text based on the prompts given to it. It can assist with various writing tasks, from brainstorming ideas to creating full articles.
+          </p>
+
+          <h3>Benefits of Using ChatGPT for Blogging</h3>
+          <ul>
+            <li><strong>Speed:</strong> ChatGPT can generate content quickly, helping you meet tight deadlines.</li>
+            <li><strong>Idea Generation:</strong> If you're stuck, ChatGPT can provide fresh ideas or topics to explore.</li>
+            <li><strong>Consistency:</strong> It can maintain a consistent tone and style throughout your posts.</li>
+          </ul>
+
+          <h3>How to Use ChatGPT for Blog Posts</h3>
+          <p>Follow these steps to generate your blog posts:</p>
+          <ol>
+            <li><strong>Define Your Topic:</strong> Start with a clear idea of what you want to write about. Be specific.</li>
+            <li><strong>Craft Your Prompt:</strong> Create a detailed prompt that instructs ChatGPT on what you need. For example, "Write a blog post about the benefits of meditation."</li>
+            <li><strong>Review and Edit:</strong> Once ChatGPT generates the content, read through it and make necessary edits to align with your voice and style.</li>
+            <li><strong>Add Personal Touches:</strong> Incorporate your insights, experiences, or anecdotes to make the post unique.</li>
+            <li><strong>Optimize for SEO:</strong> Ensure your blog post is optimized for search engines by including relevant keywords.</li>
+          </ol>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Be Specific:</strong> The more detailed your prompt, the better the output.</li>
+            <li><strong>Limit the Output:</strong> If generating a full article, ask for sections or subsections to make it manageable.</li>
+            <li><strong>Verify Information:</strong> Always fact-check any information provided by ChatGPT.</li>
+          </ul>
+
+          <h3>Conclusion</h3>
+          <p>
+            ChatGPT is a powerful tool that can enhance your blogging experience, making it easier to generate content and overcome writer's block. By following the steps and best practices outlined in this post, you can effectively utilize ChatGPT to create engaging and informative blog posts.
+          </p>
+
+          <p><strong>Happy writing!</strong> 🚀</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h4>Leave a Comment</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="comment" rows="4" placeholder="Your Comment"></textarea>
+            </div>
+            <input type="button" class="btn btn-primary" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 High Knowledge Preparatory School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

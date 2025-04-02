@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./web
+    # I am not exposing the port anymore!
+
+  proxy:
+    build:
+      context: ./proxy
+    ports:
+      - 8081:80

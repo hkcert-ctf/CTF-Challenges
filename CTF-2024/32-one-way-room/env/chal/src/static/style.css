@@ -1,0 +1,120 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #202124;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 40px; /* Adds space between the top of the page and the title */
+    margin-bottom: 20px; /* Adds space between the title and the form container */
+}
+
+/* Container for form */
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px; /* Increased max-width to allow wider textboxes */
+    width: 100%; /* Full width of the container */
+    margin: 0 20px; /* Add horizontal margin */
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    color: #5f6368;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input styling */
+input[type="text"] {
+    width: 100%; /* Take full width of the container */
+    padding: 12px; /* Add padding for a larger appearance */
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+/* Result page list styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #202124;
+}
+
+.correct {
+    border-left: 4px solid #34a853;
+}
+
+.incorrect {
+    border-left: 4px solid #ea4335;
+}
+
+/* Hidden string styling */
+.hidden-string {
+    background-color: #f1f8e9;
+    color: #34a853;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #4285f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

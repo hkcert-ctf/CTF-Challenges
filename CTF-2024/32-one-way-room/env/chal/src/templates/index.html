@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Submission</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Submit Your Answers</h1>
+    <div class="container">
+        
+        <form action="/check" method="POST">
+            <label for="uuid">UUID of /dev/sda1:</label>
+            <input type="text" id="uuid" name="uuid" required>
+
+            <label for="backdoor_url">Backdoor URL:</label>
+            <input type="text" id="backdoor_url" name="backdoor_url" required>
+
+            <label for="password">Password for user very-secure:</label>
+            <input type="text" id="password" name="password" required>
+
+            <label for="deleted_file_flag">Deleted file flag:</label>
+            <input type="text" id="deleted_file_flag" name="deleted_file_flag" required>
+
+            <label for="attacker_ip">IP of login attempt:</label>
+            <input type="text" id="attacker_ip" name="attacker_ip" required>
+
+            <button type="submit">Submit Answers</button>
+        </form>
+    </div>
+</body>
+</html>

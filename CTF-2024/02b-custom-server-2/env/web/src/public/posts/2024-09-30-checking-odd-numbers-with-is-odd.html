@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Bootstrap 5 Page with Sticky Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">High Knowledge Preparatory School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Post Header -->
+  <section class="post-header text-center">
+    <div class="container pt-4 pb-2">
+      <h1 class="post-title">Checking odd numbers with is-odd</h1>
+      <p class="post-meta">
+        <span class="post-author">John Doe</span>
+        <span class="text-muted">・</span>
+        <span>September 30, 2024</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Post Content -->
+  <section class="post-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <img src="/images/is-odd.png" class="img-fluid pb-4">
+
+          <p>
+            When working with numbers in JavaScript, it’s often essential to check if a number is odd or even. The <code>is-odd</code> library provides a simple and efficient way to determine whether a given number is odd. In this post, we’ll explore how to use the <code>is-odd</code> library and discuss its benefits.
+          </p>
+
+          <h3>What is <code>is-odd</code>?</h3>
+          <p>
+            The <code>is-odd</code> library is a lightweight utility that allows you to easily check if a number is odd. It is particularly useful when dealing with numeric data in applications that require conditional logic based on whether numbers are odd.
+          </p>
+
+          <h3>Installation</h3>
+          <p>To get started, you need to install the <code>is-odd</code> library. You can do this using npm:</p>
+          <pre><code>npm install is-odd</code></pre>
+
+          <h3>Usage</h3>
+          <p>Once you have the library installed, you can start using it in your project. Here’s a simple example:</p>
+          <pre><code>const isOdd = require('is-odd');
+
+// Check if a number is odd
+const number = 5;
+if (isOdd(number)) {
+    console.log(`${number} is an odd number.`);
+} else {
+    console.log(`${number} is an even number.`);
+}</code></pre>
+
+          <h3>How It Works</h3>
+          <p>
+            In the example above, we first require the <code>is-odd</code> library. We then check if the variable <code>number</code> is odd using the <code>isOdd</code> function. If the number is odd, it prints a corresponding message to the console.
+          </p>
+
+          <h3>Multiple Numbers Check</h3>
+          <p>If you need to check multiple numbers, you can easily do so using a loop:</p>
+          <pre><code>const numbers = [1, 2, 3, 4, 5, 6];
+
+numbers.forEach(num => {
+    if (isOdd(num)) {
+        console.log(`${num} is odd.`);
+    } else {
+        console.log(`${num} is even.`);
+    }
+});</code></pre>
+
+          <h3>Benefits of Using <code>is-odd</code></h3>
+          <ul>
+            <li><strong>Simple API:</strong> The library has a straightforward interface, making it easy to integrate into any project.</li>
+            <li><strong>Lightweight:</strong> With minimal overhead, it’s a great choice for performance-sensitive applications.</li>
+            <li><strong>Readability:</strong> Using <code>isOdd</code> enhances the readability of your code, making it clear what the intent is.</li>
+          </ul>
+
+          <h3>Conclusion</h3>
+          <p>
+            The <code>is-odd</code> library is a handy tool for checking odd numbers in JavaScript. Its simple API, lightweight nature, and clarity make it a valuable addition to any developer's toolkit. Whether you’re working on a small project or a larger application, using libraries like <code>is-odd</code> can save you time and enhance your code quality.
+          </p>
+
+          <p><strong>Happy coding!</strong> 🚀</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h4>Leave a Comment</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="comment" rows="4" placeholder="Your Comment"></textarea>
+            </div>
+            <input type="button" class="btn btn-primary" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 High Knowledge Preparatory School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# other metadata fields
+id: '09'
+slug: void
+enabled: true
+author: 'Mystiz'
+categories:
+  - reverse
+  - difficulty-1
+points: 100
+released_at: '2024-11-09T10:00+08:00'
+flag: 'hkcert24{j4v4scr1p7_1s_n0w_alm0s7_y3t_4n0th3r_wh173sp4c3_pr09r4mm1n9_l4ngu4g3}'
+deployments:
+  - type: environment
+    deploymentType: stateless
+    exposes:
+      - ingressType: web-ingress
+metadata: {}

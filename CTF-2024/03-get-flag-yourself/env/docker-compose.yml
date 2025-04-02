@@ -1,0 +1,8 @@
+services:
+  app:
+    build: ./app
+    environment:
+      FLAG: hkcert24{https://i.redd.it/bbic46fn5zp11.jpg}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

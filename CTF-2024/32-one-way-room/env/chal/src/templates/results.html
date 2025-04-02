@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Submission</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Results</h1>
+    <ul>
+        <li>UUID of /dev/sda1: {{ results['uuid'] }}</li>
+        <li>Backdoor URL: {{ results['backdoor_url'] }}</li>
+        <li>Password for user very-secure: {{ results['password'] }}</li>
+        <li>Deleted file flag: {{ results['deleted_file_flag'] }}</li>
+        <li>IP of login attempt: {{ results['attacker_ip'] }}</li>
+    </ul>
+
+    {% if hidden_string %}
+    <p><strong>Congratulations! Here's your flag: {{ hidden_string }}</strong></p>
+    {% endif %}
+
+    <a href="/">Go back</a>
+</body>
+</html>

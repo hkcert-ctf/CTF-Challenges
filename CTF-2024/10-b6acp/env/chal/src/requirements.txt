@@ -1,0 +1,2 @@
+flask
+searchor < 2.4.2

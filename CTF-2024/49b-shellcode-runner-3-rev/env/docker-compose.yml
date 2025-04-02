@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+    chal:
+      build: ./chall
+      ports:
+        - "1337:9999"

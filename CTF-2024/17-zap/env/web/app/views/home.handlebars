@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-6 text-center">Welcome to ⚡ – Your Premier Ethereum Trading Platform</h1>
+
+            <p>Explore the future of finance with our state-of-the-art Ethereum trading platform. At ⚡, we empower
+                traders of all levels with cutting-edge tools, real-time data, and a user-friendly interface designed to
+                optimize your trading experience. Whether you're a seasoned trader or just getting started, our platform
+                offers:</p>
+
+            <ul>
+                <li><b>Live Market Data:</b> Stay ahead with up-to-the-minute Ethereum price updates and market trends.
+                </li>
+                <li><b>Advanced Trading Tools:</b> Utilize our comprehensive suite of trading tools and analytics to
+                    make
+                    informed decisions.</li>
+                <li><b>Secure Transactions:</b> Trade with confidence knowing your transactions are protected by
+                    top-tier
+                    security protocols.</li>
+                <li><b>24/7 Support:</b> Our dedicated support team is here to assist you around the clock.</li>
+            </ul>
+            <p>Join us at ⚡ and experience the future of Ethereum trading today!</p>
+
+            <p class="text-center">
+                <button class="btn btn-secondary" onclick="loginWithMetamask()">
+                    <img src="/static/images/metamask-fox.svg" width="16" height="16">
+                    Login with MetaMask
+                </button>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function loginWithMetamask() {
+        if (!window.ethereum) {
+            alert('go install metamask')
+            return
+        }
+
+        const accounts = await window.ethereum.request({
+            "method": "eth_requestAccounts",
+            "params": []
+        })
+        const account = accounts[0]
+
+        const signature = await window.ethereum.request({
+            "method": "personal_sign",
+            "params": [`I am ${account} and I am signing in`, account]
+        })
+
+        await fetch('/api/login', {
+            body: JSON.stringify({ account, signature }),
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        window.location = '/trade'
+    }
+</script>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Bootstrap 5 Page with Sticky Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">High Knowledge Preparatory School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Post Header -->
+  <section class="post-header text-center">
+    <div class="container pt-4 pb-2">
+      <h1 class="post-title">Running sudo commands using Python</h1>
+      <p class="post-meta">
+        <span class="post-author">John Doe</span>
+        <span class="text-muted">・</span>
+        <span>September 30, 2024</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Post Content -->
+  <section class="post-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <img src="/images/python.png" class="img-fluid pb-4">
+
+          <p>
+            In many systems administration tasks, you might need to run commands with superuser privileges, commonly achieved by using <code>sudo</code> in the terminal. But what if you want to automate these tasks in Python? Running <code>sudo</code> commands from a Python script can streamline your workflow and simplify the automation of administrative tasks.
+          </p>
+          <p>
+            In this post, we’ll explore how to run <code>sudo</code> commands using Python, cover some of the necessary precautions, and provide a few code examples to help you get started.
+          </p>
+
+          <h3>Why Use Python for <code>sudo</code> Commands?</h3>
+          <p>
+            Python is a powerful, versatile programming language that allows you to interface with the operating system, handle files, run system commands, and much more. Using Python to execute <code>sudo</code> commands offers several advantages:
+          </p>
+          <ul>
+            <li><strong>Automation</strong>: You can automate system maintenance, backups, and other repetitive tasks.</li>
+            <li><strong>Control</strong>: Python gives you more control over error handling and output management.</li>
+            <li><strong>Cross-platform</strong>: While <code>sudo</code> is Unix-specific, Python scripts can be adapted to other platforms for general automation tasks.</li>
+          </ul>
+
+          <h3>Pre-requisites</h3>
+          <p>Before diving into code, ensure the following:</p>
+          <ol>
+            <li><strong>Python Installed</strong>: You need Python installed on your system. Most Unix-based systems come with Python pre-installed, but if not, you can install it <a href="https://www.python.org/">here</a>.</li>
+            <li><strong>sudo Access</strong>: You need sudo access for your user account.</li>
+          </ol>
+
+          <h3>Using Python’s <code>subprocess</code> Module</h3>
+          <p>
+            To run <code>sudo</code> commands in Python, you’ll primarily use the <code>subprocess</code> module, which allows you to spawn new processes, connect to their input/output/error pipes, and retrieve return codes.
+          </p>
+
+          <pre><code>import subprocess
+
+# Command to be executed
+command = ["sudo", "apt-get", "update"]
+
+# Execute the command
+try:
+    subprocess.run(command, check=True)
+    print("Command executed successfully")
+except subprocess.CalledProcessError as e:
+    print(f"Error occurred: {e}")
+</code></pre>
+
+          <p><strong>Explanation:</strong></p>
+          <ul>
+            <li><code>subprocess.run</code>: This function runs the command described by the <code>command</code> list. In this case, it runs <code>sudo apt-get update</code>.</li>
+            <li><code>check=True</code>: This ensures that Python raises an error if the command fails.</li>
+          </ul>
+
+          <h3>Handling Password Prompts</h3>
+          <p>
+            Running <code>sudo</code> will often prompt for a password. If you run the script from a shell that has already been authenticated with <code>sudo</code>, it might not prompt again. However, for scripts that require inputting the password, here’s how you can handle it:
+          </p>
+
+          <pre><code>import subprocess
+
+command = "sudo apt-get update"
+
+# Prompt user for password
+sudo_password = input("Enter your sudo password: ")
+
+# Use subprocess to pass the password to the sudo command
+process = subprocess.Popen(f'echo {sudo_password} | sudo -S {command}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = process.communicate()
+
+print(stdout.decode())
+if process.returncode != 0:
+    print(stderr.decode())
+</code></pre>
+
+          <p><strong>Explanation:</strong></p>
+          <ul>
+            <li><code>Popen</code>: This function allows more control over the input/output of a process. In this case, we’re piping the password into the <code>sudo</code> command.</li>
+            <li><code>-S</code>: This option tells <code>sudo</code> to read the password from the standard input (which we pass using <code>echo</code>).</li>
+          </ul>
+
+          <div class="alert alert-warning" role="alert">
+            ⚠ <strong>Security Warning:</strong> Hardcoding or passing passwords directly through scripts is insecure. Consider using more secure methods such as <code>keyring</code>, or running commands in an environment where <code>sudo</code> authentication has already been handled.
+          </div>
+
+          <h3>Using <code>getpass</code> for Secure Password Entry</h3>
+          <p>Instead of using <code>input()</code> to prompt for the password, which displays the password on the screen, you can use the <code>getpass</code> module to hide it:</p>
+
+          <pre><code>import subprocess
+import getpass
+
+command = "apt-get update"
+sudo_password = getpass.getpass("Enter your sudo password: ")
+
+process = subprocess.Popen(f'echo {sudo_password} | sudo -S {command}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = process.communicate()
+
+print(stdout.decode())
+if process.returncode != 0:
+    print(stderr.decode())
+</code></pre>
+
+          <h3>Using <code>os.system</code> (Simple but Limited)</h3>
+          <p>
+            For simple tasks, you can also use the <code>os.system()</code> method. However, it’s less flexible than <code>subprocess</code> and not recommended for more complex scripts:
+          </p>
+
+          <pre><code>import os
+
+os.system("sudo apt-get update")
+</code></pre>
+
+          <p>This is a straightforward method but lacks the advanced features of <code>subprocess</code> like error handling, piping, and output management.</p>
+
+          <h3>Best Practices</h3>
+          <ul>
+            <li><strong>Avoid hardcoding sensitive information</strong>: Never hardcode passwords or sensitive data in your scripts. Use environment variables, <code>keyring</code> libraries, or prompt users securely.</li>
+            <li><strong>Use with caution</strong>: Always be cautious when executing commands as <code>sudo</code>. Running malicious or incorrect commands can have severe consequences on your system.</li>
+            <li><strong>Testing</strong>: Ensure you test scripts in a safe environment (such as a virtual machine) before running them in production.</li>
+          </ul>
+
+          <h3>Conclusion</h3>
+          <p>
+            Running <code>sudo</code> commands using Python can be incredibly powerful for automating system administration tasks. The <code>subprocess</code> module provides flexibility and control over how you run and manage system commands, and with the right precautions, you can use Python to create efficient automation scripts.
+          </p>
+          <p>Remember, with great power comes great responsibility! Always ensure that your scripts are secure and that you have a clear understanding of the commands you're executing.</p>
+
+          <p><strong>Happy coding!</strong> 🚀</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h4>Leave a Comment</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <textarea class="form-control" id="comment" rows="4" placeholder="Your Comment"></textarea>
+            </div>
+            <input type="button" class="btn btn-primary" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 High Knowledge Preparatory School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

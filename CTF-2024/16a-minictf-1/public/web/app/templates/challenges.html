@@ -1,0 +1,235 @@
+{% extends "base/layout.html" %}
+
+{% block title %}Challenges{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row" id="challenge-list">
+  </div>
+</div>
+
+<div class="modal fade" id="challenge-details-modal" tabindex="-1" aria-labelledby="challenge-details-modal-label"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="challenge-details-title"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"></div>
+      <form onsubmit="submitFlag(); return false;">
+        <div class="modal-footer">
+          <input type="text" name="flag" class="form-control">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ribbon reference: https://codepen.io/magnusriga/pen/aKopeG */
+  .solved-ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 93px;
+    height: 93px;
+    text-align: right;
+  }
+
+  .solved-ribbon span {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+    transform: rotate(45deg);
+    width: 125px;
+    display: block;
+    background: #79a70a;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 17px;
+    right: -29px;
+  }
+
+  .solved-ribbon span::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #79A70A;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+
+  .solved-ribbon span::after {
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #79A70A;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+  }
+
+  .modal-body {
+    min-height: 100px;
+    max-height: calc(100vh - 600px);
+    overflow-y: auto;
+  }
+</style>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/dayjs.min.js"
+  integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/plugin/relativeTime.min.js"
+  integrity="sha512-MVzDPmm7QZ8PhEiqJXKz/zw2HJuv61waxb8XXuZMMs9b+an3LoqOqhOEt5Nq3LY1e4Ipbbd/e+AWgERdHlVgaA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  async function listChallenges() {
+    const [
+      listChallengesResponse,
+      listAttemptsResponse
+    ] = await Promise.all([
+      fetch('/api/challenges/?group=category'),
+      fetch('/api/attempts/')
+    ])
+    const [
+      { challenges: challengesByCategory },
+      { attempts }
+    ] = await Promise.all([
+      listChallengesResponse.json(),
+      listAttemptsResponse.json()
+    ])
+
+    const challengeListDom = document.getElementById('challenge-list');
+    while (challengeListDom.firstChild) {
+      challengeListDom.removeChild(challengeListDom.firstChild);
+    }
+
+    // Populate the list of challenges
+    const categories = Object.keys(challengesByCategory);
+
+    categories.forEach(category => {
+      const categoryChallengeListTemplateDom = document.createElement('template');
+      categoryChallengeListTemplateDom.innerHTML = `
+          <div class="col-12 p-2">
+            <h2>${category}</h2>
+            <div style="display: flex; flex-wrap: wrap;">
+            </div>
+          </div>`;
+      const categoryChallengeListDom = categoryChallengeListTemplateDom.content.children[0];
+
+      const categoryChallenges = challengesByCategory[category]
+
+      categoryChallenges.forEach(challenge => {
+        const challengeTemplateDom = document.createElement('template');
+        challengeTemplateDom.innerHTML = `
+            <div class="col-3 p-2">
+              <div class="card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#challenge-details-modal">
+                <div class="solved-ribbon d-none"><span>Solved!</span></div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <h6 class="card-subtitle text-muted"></h6>
+                    <p class="card-text">
+                      <span class="badge bg-secondary"></span>
+                    </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>`;
+        const challengeDom = challengeTemplateDom.content.children[0];
+
+        challengeDom.setAttribute('id', `challenge-${challenge['id']}`);
+        challengeDom.querySelector('.card-title').innerText = challenge['title'];
+        challengeDom.querySelector('.card-subtitle').innerText = `${challenge['score']} points, ${challenge['solves']} solves`;
+        challengeDom.querySelector('.badge').innerText = challenge['category'];
+        challengeDom.querySelector('.card-footer').getElementsByClassName('text-muted')[0].innerText = `Released ${dayjs(challenge['released_at']).fromNow()}`;
+
+        challengeDom.querySelector('.card').setAttribute('data-bs-id', challenge['id']);
+        challengeDom.querySelector('.card').setAttribute('data-bs-title', `${challenge['title']} (${challenge['score']} points, ${challenge['solves']} solves)`);
+        challengeDom.querySelector('.card').setAttribute('data-bs-description', challenge['description']);
+
+        categoryChallengeListDom.getElementsByTagName('div')[0].appendChild(challengeDom);
+      })
+
+      challengeListDom.appendChild(categoryChallengeListDom)
+    })
+
+    // Populate the solved challenges
+    const solvedChallengeIds = attempts
+      .filter(attempt => attempt['is_correct'])
+      .forEach(attempt => {
+        const challengeId = attempt['challenge_id'];
+        document.querySelector(`#challenge-${challengeId} .solved-ribbon`).classList.remove('d-none');
+        document.querySelector(`#challenge-${challengeId} .card`).setAttribute('data-bs-solved', true);
+      })
+  }
+
+  function onOpenchallengeDetailsModalDom(event) {
+    const button = event.relatedTarget;
+
+    const id = button.getAttribute('data-bs-id');
+    const title = button.getAttribute('data-bs-title');
+    const description = button.getAttribute('data-bs-description');
+    const isSolved = button.getAttribute('data-bs-solved');
+    const isAnonymous = {{ current_user.is_anonymous | lower
+  }};
+
+  challengeDetailsModalDom.querySelector('.modal-title').innerText = title;
+  challengeDetailsModalDom.querySelector('.modal-body').innerHTML = description;
+  challengeDetailsModalDom.setAttribute('data-bs-id', id.toString());
+
+  challengeDetailsModalDom.querySelector('.modal-footer > input').disabled = isSolved | isAnonymous;
+  challengeDetailsModalDom.querySelector('.modal-footer > input').setAttribute(
+    'placeholder', isSolved ? 'You solved this challenge!' : 'Flag...');
+  challengeDetailsModalDom.querySelector('.modal-footer > button').disabled = isSolved | isAnonymous;
+  challengeDetailsModalDom.querySelector('.modal-footer > input').value = '';
+  }
+
+  async function submitFlag() {
+    const challengeId = challengeDetailsModalDom.getAttribute('data-bs-id');
+    const flag = challengeDetailsModalDom.querySelector('.modal-footer > input').value;
+    const submitFlagResponse = await fetch(`/api/challenges/${challengeId}/flag/`, {
+      body: JSON.stringify({ flag }),
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+    const { error } = await submitFlagResponse.json();
+    if (error) {
+      // (mystiz): better prompt
+      alert(error);
+      return;
+    }
+
+    // Refresh the list of challenges
+    challengeDetailsModal.hide();
+    listChallenges();
+  }
+
+  // create listeners
+  const challengeDetailsModalDom = document.getElementById('challenge-details-modal');
+  challengeDetailsModalDom.addEventListener('show.bs.modal', onOpenchallengeDetailsModalDom);
+
+  const challengeDetailsModal = new bootstrap.Modal(challengeDetailsModalDom);
+
+  dayjs.extend(dayjs_plugin_relativeTime);
+  listChallenges();
+</script>
+{% endblock %}

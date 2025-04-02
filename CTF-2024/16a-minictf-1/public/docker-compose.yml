@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./web
+    ports:
+      - 5000:80

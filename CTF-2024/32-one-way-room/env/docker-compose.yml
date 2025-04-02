@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./chal/Dockerfile
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    volumes:
+      - ./chal/src:/app

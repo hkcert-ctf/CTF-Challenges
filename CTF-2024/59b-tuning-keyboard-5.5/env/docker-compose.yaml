@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  tuning-keyboard-5-5:
+    build: chal
+    ports:
+      - "8059:80"

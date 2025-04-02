@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    font-family: "Fira Code", monospace;
+    width: 1000px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #666;
+}
+
+@keyframes nudgeAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.wrong {
+    animation: nudgeAnimation 0.2s ease-in-out;
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.correct {
+    background-color: #D4EDDA;
+    color: #155724;
+}

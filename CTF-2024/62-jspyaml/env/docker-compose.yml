@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  jspyaml:
+    build: web/.
+    ports:
+      - "8863:3000"
+    deploy: {resources: {limits: {cpus: '1', memory: 512M}}}
+    restart: unless-stopped
+    shm_size: 2g
+

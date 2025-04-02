@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Bootstrap 5 Page with Sticky Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">High Knowledge Preparatory School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-light text-center py-5">
+      <div class="container">
+        <h1 class="display-4">High Knowledge Preparatory School</h1>
+        <p class="lead">We share advanced technical knowledge and make everyone a better engineer.</p>
+        <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Running sudo commands using Python</h5>
+                <p class="card-text">
+                  <img src="/images/python.png" class="img-fluid pb-4">
+                  In many systems administration tasks, you might need to run commands with superuser privileges, commonly achieved by using sudo in the terminal. But what if you want to automate...
+                </p>
+                <a href="posts/2024-09-30-running-sudo-commands-using-python.html" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">How to generate posts with ChatGPT</h5>
+                <p class="card-text">
+                  <img src="/images/chatgpt.png" class="img-fluid pb-4">
+                  Generating blog posts can be a daunting task for many writers, but with the advent of artificial intelligence tools like ChatGPT, the process has become significantly easier...
+                </p>
+                <a href="posts/2024-09-30-how-to-generate-posts-with-chatgpt.html" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Checking odd numbers with is-odd</h5>
+                <p class="card-text">
+                  <img src="/images/is-odd.png" class="img-fluid pb-4">
+                  When working with numbers in JavaScript, it’s often essential to check if a number is odd or even. The is-odd library provides a simple and efficient way to determine whether...
+                </p>
+                <a href="posts/2024-09-30-checking-odd-numbers-with-is-odd.html" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 High Knowledge Preparatory School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

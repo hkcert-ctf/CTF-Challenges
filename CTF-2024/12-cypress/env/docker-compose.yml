@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./web
+    environment:
+      FLAG: "hkcert24{y0u_c4n_h00k_func710ns_t0_35c4p3_fr0m_r3v3r5e_3n9e3r1n9}"
+    ports:
+      - 5000:80

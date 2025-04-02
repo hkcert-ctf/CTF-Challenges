@@ -1,0 +1,1 @@
+<?php require("flag.php");(mb_strlen($v=$_POST["v"])<=(55*5)<<5&&$x=v($v))?print_r(eval("return $x;")):header("Location: flag.html")||show_source(__FILE__);

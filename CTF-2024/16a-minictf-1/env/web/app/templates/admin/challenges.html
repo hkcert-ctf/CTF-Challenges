@@ -1,0 +1,63 @@
+{% extends "base/layout.html" %}
+
+{% block title %}Manage Challenges{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 p-2">
+      <div style="display: flex; flex-wrap: wrap;" id="challenge-list">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/dayjs.min.js"
+  integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/plugin/relativeTime.min.js"
+  integrity="sha512-MVzDPmm7QZ8PhEiqJXKz/zw2HJuv61waxb8XXuZMMs9b+an3LoqOqhOEt5Nq3LY1e4Ipbbd/e+AWgERdHlVgaA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  async function listChallenges() {
+    const listChallengesResponse = await fetch('/api/admin/challenges')
+    const { challenges } = await listChallengesResponse.json()
+
+    challenges.forEach(challenge => {
+      const challengeTemplateDom = document.createElement('template')
+      challengeTemplateDom.innerHTML = `
+            <div class="col-3 p-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <h6 class="card-subtitle text-muted"></h6>
+                    <p class="card-text">
+                      <span class="badge bg-secondary"></span>
+                    </p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted"></small>
+                </div>
+              </div>
+            </div>`
+      const challengeDom = challengeTemplateDom.content.children[0]
+      challengeDom.getElementsByClassName('card-title')[0].innerText = challenge['title']
+      challengeDom.getElementsByClassName('card-subtitle')[0].innerText = `${challenge['score']} points, ${challenge['solves']} solves`
+      challengeDom.getElementsByClassName('badge bg-secondary')[0].innerText = challenge['category']
+      challengeDom.getElementsByClassName('card-footer')[0]
+        .getElementsByClassName('text-muted')[0].innerText = `Released ${dayjs(challenge['released_at']).fromNow()}`
+
+      document.getElementById('challenge-list').appendChild(challengeDom)
+    })
+  }
+
+  dayjs.extend(dayjs_plugin_relativeTime)
+  listChallenges()
+  
+  // I haven't implement APIs to create/update/delete challenges...
+  // I will work on the UI to integrate with those APIs when they exist.
+</script>
+{% endblock %}

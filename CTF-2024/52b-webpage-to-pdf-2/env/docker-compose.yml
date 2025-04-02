@@ -1,0 +1,5 @@
+services:
+  chal:
+    build: chal
+    ports:
+      - "5000:5000"

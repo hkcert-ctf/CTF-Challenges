@@ -1,0 +1,44 @@
+{% extends "base/layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="row justify-content-md-center">
+    {% for category, message in messages %}
+    <div class="col-12">
+      <div class="alert alert-{{ category }}" role="alert">
+        {{ message }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  <div class="row justify-content-md-center">
+    <div class="col-sm-4">
+
+      <div class="card">
+        <div class="card-header">Register</div>
+        <div class="card-body text-success">
+          <form method="POST" action="/register/">
+            <div class="input-group mb-3">
+              <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="d-grid gap-2 mb-2">
+              <button class="btn btn-dark" type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

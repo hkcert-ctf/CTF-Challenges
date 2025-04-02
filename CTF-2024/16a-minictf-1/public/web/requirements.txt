@@ -1,0 +1,8 @@
+flask==2.3.3
+Flask-SQLAlchemy==3.1.1
+Flask-Login==0.6.3
+Flask-Migrate==4.0.5
+Flask-Limiter==3.6.0
+WTForms==3.0.1
+WTForms-SQLAlchemy==0.3
+gunicorn==22.0.0

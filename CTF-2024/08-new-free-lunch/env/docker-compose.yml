@@ -1,0 +1,19 @@
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: ./chal/Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      - ./chal/src:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    build: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssw0rdP@
+      MYSQL_DATABASE: game_scores

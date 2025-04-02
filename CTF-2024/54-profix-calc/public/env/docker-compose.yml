@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  chal:
+    build: ./chal
+    ports:
+      - 28003:1337
+    networks:
+      - default
+
+networks:
+  default:
