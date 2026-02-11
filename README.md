@@ -1,6 +1,6 @@
 # HKCERT CTF Challenges
 
-(CTF_KV.png)
+![HKCERT CTF](CTF_KV.png)
 
 
 ## Description
