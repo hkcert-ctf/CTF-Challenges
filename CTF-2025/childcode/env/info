@@ -1,0 +1,4 @@
+container_format='docker'
+disk_format='raw'
+min_disk='0'
+min_ram='0'
